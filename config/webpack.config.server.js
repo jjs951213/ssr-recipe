@@ -11,8 +11,7 @@ const sassRegex = /.(scss|sass)$/;
 const sassModuleRegex = /.module.(scss|sass)$/;
 
 
-const publicUrl = paths.servedPath.slice(0, -1);
-const env = getClientEnvironment(publicUrl);
+const env = getClientEnvironment(paths.publicUrlOrPath.slice(0, -1));
 
 module.exports = {
   mode: 'production', // 프로덕션 모드로 설정하여 최적화 옵션들을 활성화
